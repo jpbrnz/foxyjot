@@ -1,6 +1,6 @@
 {
   "name": "foxyjot",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "FoxyJot",
   "author": "Josh Burns <josh@brnzpub.com>",
   "private": true,
@@ -10,7 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "firebase": "^4.5.0",
+    "firebase": "^5.1.0",
     "font-awesome": "^4.7.0",
     "highlight.js": "^9.12.0",
     "moment": "^2.20.1",
