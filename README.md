@@ -1,14 +1,9 @@
-
-
 <div align="center">
   <p>
   <img src="https://raw.githubusercontent.com/jpbrnz/foxyjot/master/static/img/foxyjot-screen-set.png" width="48%">
 </p>
+  <p><a href="https://travis-ci.org/jpbrnz/foxyjot"><img src="https://img.shields.io/travis/jpbrnz/foxyjot/master.svg" alt="Travis branch"></a> <a href="https://github.com/jpbrnz/foxyjot/issues"><img src="https://img.shields.io/github/issues/jpbrnz/foxyjot.svg" alt="GitHub issues"></a> <a href="https://github.com/jpbrnz/foxyjot/blob/master/LICENSE"><img src="https://img.shields.io/github/license/jpbrnz/foxyjot.svg" alt="GitHub license"></a> <a href="https://twitter.com/intent/tweet?text=Wow:&amp;url=https%3A%2F%2Fgithub.com%2Fjpbrnz%2Ffoxyjot"><img src="https://img.shields.io/twitter/url/https/github.com/jpbrnz/foxyjot.svg?style=social" alt="Twitter"></a></p>
 </div>
-
-
-
-[![Travis branch](https://img.shields.io/travis/jpbrnz/foxyjot/master.svg)](https://travis-ci.org/jpbrnz/foxyjot) [![GitHub issues](https://img.shields.io/github/issues/jpbrnz/foxyjot.svg)](https://github.com/jpbrnz/foxyjot/issues) [![GitHub license](https://img.shields.io/github/license/jpbrnz/foxyjot.svg)](https://github.com/jpbrnz/foxyjot/blob/master/LICENSE) [![Twitter](https://img.shields.io/twitter/url/https/github.com/jpbrnz/foxyjot.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fjpbrnz%2Ffoxyjot)
 
 --------------------------------------------------------------------------------
 
