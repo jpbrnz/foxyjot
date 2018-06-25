@@ -1,0 +1,120 @@
+{
+  "demoData": {
+    "demoPost": {
+      "title": "Demo post",
+      "description": "An incredible description goes here",
+      "body": "<p>Welcome to FoxyJot. This is a placeholder template designed for posts.</p><p><br></p><p><span style=\"background-color: rgb(250, 250, 250);\">A quick and easy way to get started creating elegant designs that allow your site visitors to consume content in the best way possible. To get started clone or download the repository from github.</span></p><p><br></p><pre class=\"ql-syntax\" spellcheck=\"false\"> git clone https://github.com/jpbrnz/foxyjot.git \n</pre>",
+      "author": "FoxyJot Admin",
+      "tags": ["tag1", "tag2"],
+      "category": "category1",
+      "selected": false,
+      "state": "published"
+    },
+    "demoSettings": {
+      "title": "FoxyJot",
+      "description": "Creative freedom awaits!"
+    },
+    "demoLogoLink": "/static/img/foxyjot-logo.png",
+    "demoNav": [{
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "Not Found",
+        "path": "/404"
+      }
+    ],
+    "demoContent": {
+      "name": "Posts",
+      "icon": "fa-file-text",
+      "path": "/admin/posts",
+      "data": [],
+      "fields": [{
+          "multiValue": false,
+          "name": "author",
+          "type": "textbox",
+          "sortable": true
+        },
+        {
+          "multiValue": false,
+          "name": "body",
+          "type": "richtextbox",
+          "sortable": false
+        },
+        {
+          "multiValue": false,
+          "name": "category",
+          "type": "select",
+          "sortable": false
+        },
+        {
+          "multiValue": false,
+          "name": "img",
+          "type": "image",
+          "sortable": false
+        },
+        {
+          "multiValue": false,
+          "name": "tags",
+          "type": "tags",
+          "sortable": false
+        },
+        {
+          "multiValue": false,
+          "name": "title",
+          "type": "textbox",
+          "sortable": true
+        },
+        {
+          "multiValue": false,
+          "name": "description",
+          "type": "textbox",
+          "sortable": true
+        }
+      ]
+    },
+    "demoFields": [{
+        "multiValue": false,
+        "name": "title",
+        "type": "textbox",
+        "sortable": true
+      },
+      {
+        "multiValue": false,
+        "name": "description",
+        "type": "textbox",
+        "sortable": false
+      },
+      {
+        "multiValue": false,
+        "name": "category",
+        "type": "textbox",
+        "sortable": false
+      },
+      {
+        "multiValue": false,
+        "name": "body",
+        "type": "richtextbox",
+        "sortable": false
+      },
+      {
+        "multiValue": false,
+        "name": "author",
+        "type": "textbox",
+        "sortable": true
+      },
+      {
+        "multiValue": false,
+        "name": "img",
+        "type": "image",
+        "sortable": false
+      },
+      {
+        "multiValue": true,
+        "name": "tags",
+        "type": "tags",
+        "sortable": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+#admin
+  font-family: sans-serif
+
+  h1, h2, h3, h4, h5, h6
+    margin: 15px 0px 10px
+    color: #333
+
+  h1
+    font-size: 2.5rem
+    margin-top: 3rem
+    color: #435466
+    margin-bottom: -15px
+
+  h2
+    font-size: 1.8rem
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+
+  h3
+    font-size: 1.5rem
+
+  .actions
+    display: none
+
+    span
+      cursor: pointer
+
+  tr:hover .actions
+    display: inline
+
+    span
+      padding: 0px 0px 0px 10px
+
+  .notification
+    position: fixed
+    top: 60px
+    right: 10px
+    z-index: 2000
+    max-width: 90%
+
+  .titleAdmin
+    padding-bottom: 15px
+
+  .line
+    position: absolute
+    top: 50%
+    margin-left: 10px
+    width: 60px
+    height: 4px
+    background: #FFF
+    -webkit-animation: spin 1.5s infinite ease
+    animation: spin 1.5s infinite ease
+
+    &:nth-of-type(2)
+      -webkit-animation-delay: 0.1s
+      animation-delay: 0.1s
+
+    &:nth-of-type(3)
+      -webkit-animation-delay: 0.2s
+      animation-delay: 0.2s
+
+    &:nth-of-type(4)
+      -webkit-animation-delay: 0.3s
+      animation-delay: 0.3s
+
+  @keyframes spin
+    100%
+      transform: rotate(360deg)
+
+.before-enter
+  opacity: 0
+
+.enter
+  animation: fadeInUp 1s ease
+
+@keyframes fadeInUp
+  from
+    opacity: 0
+    transform: translate3d(0, 100%, 0)
+
+  to
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+
+.loading
+  position: relative
+
+.loading-bar
+  display: inline-block
+  width: 2px
+  height: 8px
+  border-radius: 2px
+  animation: loading 0.5s ease-in-out infinite
+
+  &:nth-child(1)
+    background-color: #616161
+    animation-delay: 0
+
+  &:nth-child(2)
+    background-color: #010101
+    animation-delay: 0.09s
+
+  &:nth-child(3)
+    background-color: #616161
+    animation-delay: 0.18s
+
+  &:nth-child(4)
+    background-color: #010101
+    animation-delay: 0.27s
+
+@keyframes loading
+  0%
+    transform: scale(1)
+
+  20%
+    transform: scale(1, 2.2)
+
+  40%
+    transform: scale(1)

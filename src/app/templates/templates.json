@@ -1,0 +1,17 @@
+[{
+    "filename": "About",
+    "displayName": "About us"
+  },
+  {
+    "filename": "BlogPost",
+    "displayName": "Blog post"
+  },
+  {
+    "filename": "DocsPost",
+    "displayName": "Docs"
+  },
+  {
+    "filename": "LeadGen",
+    "displayName": "Lead Gen"
+  }
+]

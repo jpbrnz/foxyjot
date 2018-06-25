@@ -1,0 +1,34 @@
+{
+  "rules": {
+    ".write": "auth != null && auth.uid === 'YOURID'",
+    ".read": true,
+    "settings": {
+      ".validate": true
+    },
+    "media": {
+      "$id": {
+        //".write": "auth != null && auth.uid == ''"
+      }
+    },
+    "nav": {
+      ".validate": true
+    },
+    "fields": {
+      ".validate": true
+    },
+    "contents": {
+      ".validate": true
+    },
+    "routes": {
+      ".validate": true
+    },
+    "$other": {
+      ".validate": false
+    },
+    "leads": {
+      ".validate": true,
+      ".write": true,
+      ".read": "auth != null && auth.uid === 'YOURID'"
+    },
+  }
+}
