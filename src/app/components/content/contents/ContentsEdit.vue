@@ -27,10 +27,6 @@
           <div v-for="(field, index) in fields" :key="index" v-if="field.type === 'richtextbox'">
             <quill-editor v-model="content[field.name]" :options="editorOptions">
             </quill-editor>
-            <div class="quill-code mt-2">
-              <div class="subheader">Code preview</div>
-              <code class="hljs xml" v-html="contentCode"></code>
-            </div>
             <input type="file" id="getImage" style="display: none;" @change="uploadImage">
           </div>
 
@@ -129,7 +125,6 @@
 
 <script>
 import firebase from 'firebase'
-import hljs from 'highlight.js'
 import { mediaRef, routesRef } from '@/app/firebase_config'
 import editorOptions from '@/app/utils/editor-options'
 import imageLoader from '@/app/mixins/image-loader'
@@ -227,11 +222,6 @@ export default {
         })
       }
       return contentDataArray
-    }
-  },
-  computed: {
-    contentCode () {
-      return hljs.highlightAuto(this.content.body).value
     }
   }
 }
