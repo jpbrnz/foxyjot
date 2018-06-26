@@ -90,13 +90,15 @@
                 <h2 class="subtitle">
                   <span style="font-size: 25px;font-weight: bold">FoxyJot</span>
                 </h2>
-                <router-link :to="{ name: 'Home'}">
-                  <!-- <img src="/static/img/qikbyte-logo.png" alt="Qikbyte logo"> -->
-                  <div>
-                    <object type="image/png" data="/static/img/foxyjot-logo.png" class="flogo" style="pointer-events: none;"></object>
-                  </div>
+                <router-link to="/" target="_blank">
+                  <v-tooltip bottom>
+                    <div slot="activator">
+                      <img src="/static/img/foxyjot-logo.png" class="flogo" alt="FoxyJot logo">
+                    </div>
+                    <span>View homepage</span>
+                  </v-tooltip>
                 </router-link>
-                <p>Version v0.0.1</p>
+                <p>Version v1.0.0</p>
               </div>
           </v-flex>
         </v-layout>

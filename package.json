@@ -1,8 +1,22 @@
 {
   "name": "foxyjot",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "FoxyJot",
-  "author": "Josh Burns <josh@brnzpub.com>",
+  "author": "Josh Burns <jpbrnz@gmail.com>",
+  "homepage": "https://foxyjot.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpbrnz/foxyjot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jpbrnz/foxyjot/issues"
+  },
+  "keywords": [
+    "vue",
+    "vuetify",
+    "firebase",
+    "cms"
+  ],
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -72,6 +86,7 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
+  "license": "MIT",
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
