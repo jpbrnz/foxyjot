@@ -59,7 +59,7 @@
                 </div>
               </div>
             </div>
-            <div class="buttons">
+            <div>
               <v-btn type="submit" color="primary" :disabled="fieldName === '' || fieldType.id === ''" @click="add()">Add field</v-btn>
               <router-link to="/admin/content" color="error" tag="v-btn">Cancel</router-link>
             </div>

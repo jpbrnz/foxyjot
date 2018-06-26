@@ -11,7 +11,7 @@
         <v-container>
            <div class="box">
              <div class="columns">
-               <div class="column is-one-third">
+               <div class="column">
                  <div class="field">
                    <label class="label">Field name</label>
                    <div class="control">

@@ -25,15 +25,15 @@
         <v-card-actions>
           <v-spacer></v-spacer>
           <div v-if="kind == 'logout'">
-            <v-btn color="primary" class="button is-success" @click="$emit('confirmLogout')">Logout</v-btn>
+            <v-btn color="primary" @click="$emit('confirmLogout')">Logout</v-btn>
             <v-btn class="button" @click="$emit('close')">Cancel</v-btn>
           </div>
           <div v-else>
             <template v-if="kind == 'deletePage' || kind == 'deleteField' || kind == 'deleteSetting' || kind == 'deleteContent' || kind == 'bulkDeleteSelected'">
-              <v-btn color="primary" class="button is-success" @click="deleteObj()">Confirm</v-btn>
+              <v-btn color="primary" @click="deleteObj()">Confirm</v-btn>
             </template>
             <template v-else>
-              <v-btn color="primary" class="button is-success" @click="add()">Add</v-btn>
+              <v-btn color="primary" @click="add()">Add</v-btn>
             </template>
             <v-btn class="button" @click="$emit('close')">Cancel</v-btn>
           </div>

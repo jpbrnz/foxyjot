@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div>
     <!-- notification -->
     <v-snackbar
       v-if="notification.message"
@@ -12,7 +12,7 @@
       {{notification.message}}
       <v-btn flat color="green" @click.native="snackbar = false"><v-icon>close</v-icon> Close</v-btn>
     </v-snackbar>
-    <v-expansion-panel>
+    <v-expansion-panel class="mt-3">
       <v-expansion-panel-content value="Database State" v-model="dbstate">
         <div slot="header" class="headline">Database State</div>
         <v-card>
@@ -119,7 +119,7 @@
         </v-card>
       </v-expansion-panel-content>
     </v-expansion-panel>
-  </v-container>
+  </div>
 </template>
 
 <script>

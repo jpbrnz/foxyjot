@@ -8,15 +8,13 @@ import VueQuillEditor from 'vue-quill-editor'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/es5/util/colors'
-import '../node_modules/font-awesome/css/font-awesome.css'
-
 import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
+
 import store from './app/store'
 
-Vue.use(VueFire) // activate vuefire plugin
-Vue.use(VueQuillEditor) // activate vue-quill-editor
+Vue.use(VueFire)
+Vue.use(VueQuillEditor)
 Vue.use(Vuetify, {
   theme: {
     primary: colors.grey.darken3,

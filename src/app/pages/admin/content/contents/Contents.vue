@@ -6,7 +6,7 @@
          <v-container id="posts" v-if="loaded">
 
             <!-- Page title -->
-            <div class="content-heading is-flex">
+            <div class="content-heading">
               <h3 class="is-size-3">{{ content.name }}</h3>
               <router-link class="primary" v-if="$route.name !== 'new'" :to="'/admin/content/' + $route.params.key + '/new'" tag="v-btn">Add New</router-link>
               <router-link flat small :to="{ name: 'Routing' }" slot="activator" href="admin/routing" class="primary--text" tag="v-btn">Add New Route  <v-icon right>library_add</v-icon></router-link>

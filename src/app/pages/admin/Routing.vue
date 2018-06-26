@@ -55,7 +55,7 @@
                 </v-select>
               </div>
               <!-- buttons -->
-              <div class="field is-grouped">
+              <div class="field">
                 <div class="control">
                   <v-btn color="primary" v-if="form.action === 'add'" class="button is-info" @click="addRoute">
                     Add

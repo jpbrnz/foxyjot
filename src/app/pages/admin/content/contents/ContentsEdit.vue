@@ -65,7 +65,7 @@
                 <input @change="uploadFeaturedImage($event, field.name)" class="file-input" type="file" name="resume">
                 <span class="file-cta">
                   <span class="file-icon">
-                    <i class="fa fa-upload"></i>
+                    <v-icon>cloud_upload</v-icon>
                   </span>
                   <span class="file-label">
                     Choose a file…

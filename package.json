@@ -1,7 +1,7 @@
 {
   "name": "foxyjot",
   "version": "1.0.0",
-  "description": "FoxyJot",
+  "description": "FoxyJot - Write, publish, share and grow! A different kind of CMS",
   "author": "Josh Burns <jpbrnz@gmail.com>",
   "homepage": "https://foxyjot.com",
   "repository": {
@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "firebase": "^5.1.0",
-    "font-awesome": "^4.7.0",
     "highlight.js": "^9.12.0",
     "moment": "^2.20.1",
     "vue": "^2.5.2",

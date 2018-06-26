@@ -61,7 +61,7 @@
                 <v-btn v-if="selectedContent" type="submit" class="error" @click="deleteMenuItem()">Delete</v-btn>
               </div>
               <v-flex xs12>
-                <div class="buttons my-3">
+                <div class="my-3">
                   <v-btn v-if="selectedContent" type="submit" class="info--text" :disabled="!selectedContent.name || !checkedFields.length" @click="createMenuItem(true)">Edit</v-btn>
                   <v-btn v-else type="submit" class="primary" :disabled="!name || !checkedFields.length" @click="createMenuItem(false)">Create new</v-btn>
                 </div>
@@ -69,15 +69,15 @@
               <br><br>
               <!-- Custom Fields -->
                 <label class="label">Fields</label>
-                <div class="field is-grouped is-grouped-multiline">
+                <div class="field">
                   <v-list two-line subheader>
                     <v-list-tile avatar class="hovedit" v-for="(field, fieldKey) in checkedFields" :key="fieldKey" v-if="field.checked">
                       <v-list-tile-content>
                         <v-list-tile-title>{{ field.name }}</v-list-tile-title>
                         <v-list-tile-sub-title>
                           <span class="link-actions">
-                            <span v-if="fieldKey !== 0" class="has-text-success fa fa-arrow-up" @click="moveFieldUp(field, checkedFields[fieldKey - 1])"></span>
-                            <span v-if="fieldKey !== checkedFields.length - 1" class="fa fa-arrow-down" @click="moveFieldDown(field, checkedFields[fieldKey + 1])"></span>
+                            <v-icon v-if="fieldKey !== 0" @click="moveFieldUp(field, checkedFields[fieldKey - 1])">arrow_upward</v-icon>
+                            <v-icon v-if="fieldKey !== checkedFields.length - 1" @click="moveFieldDown(field, checkedFields[fieldKey + 1])">arrow_downward</v-icon>
                             <span @mouseover="showDesc = !showDesc"><checkbox v-if="field.type === 'textbox'" v-model="field.sortable" /> </span>
                             <span v-if="showDesc && field.type === 'textbox'" class="has-text-danger is-size-7">Shown in table header</span>
                           </span>
@@ -107,8 +107,8 @@
                         <v-list-tile-title>{{ field.name }}</v-list-tile-title>
                         <v-list-tile-sub-title>
                           <span class="link-actions">
-                          <span class="has-text-danger fa fa-trash" @click="removeField(field)"></span>
-                          <router-link :to="'/admin/content/fieldEdit/' + field['.key']"><span class="has-text-info fa fa-edit"></span></router-link>
+                          <v-icon @click="removeField(field)">delete</v-icon>
+                          <router-link :to="'/admin/content/fieldEdit/' + field['.key']"><v-icon>create</v-icon></router-link>
                           </span>
                         </v-list-tile-sub-title>
                       </v-list-tile-content>
@@ -327,6 +327,9 @@ export default {
 
   .link-actions {
     display: none;
+    i {
+      font-size: 1rem;
+    }
     span {
       cursor: pointer;
     }
@@ -334,6 +337,11 @@ export default {
 
   .hovedit:hover .link-actions {
     display: inline;
+    cursor: pointer;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
   }
   ul {
     list-style: none;

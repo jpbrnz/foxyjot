@@ -140,7 +140,7 @@ export default {
       kind: 'logout',
       menu: [
         {
-          name: 'Routing',
+          name: 'Routing and Navigation',
           path: '/admin/routing',
           icon: 'swap_horiz'
         },

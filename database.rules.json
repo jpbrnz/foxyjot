@@ -6,9 +6,7 @@
       ".validate": true
     },
     "media": {
-      "$id": {
-        //".write": "auth != null && auth.uid == ''"
-      }
+      "$id": {}
     },
     "nav": {
       ".validate": true

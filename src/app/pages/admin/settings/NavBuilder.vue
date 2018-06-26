@@ -37,7 +37,7 @@
               <v-btn v-if="action === 'edit-sub'" color="warning" class="button is-info" @click="updateSubLink">
                 Edit sub-link
               </v-btn>
-              <v-btn class="button" @click="clear">Cancel</v-btn>
+              <v-btn @click="clear">Cancel</v-btn>
             </div>
           </div>
         </v-card-text>
@@ -265,6 +265,8 @@ ul {
 
   .nav-preview>li:hover .link-actions {
     display: inline;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .sub-nav-preview>li:hover .sub-link-actions {

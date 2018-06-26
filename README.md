@@ -9,9 +9,7 @@
 
 # FoxyJot - Write, Publish, Share, Grow
 
-Exploring Vue, Vuetify, Firebase. Creating a content management system that allows for flexible and quick development. Core features include creating content types, content, routing content, storing media and creating templates for content. Keeping the repository light and simple so customizing it can be done efficiently. This project was created to get under the hood of Vue.js and understand how quickly and effectively both template and content management can be done. These are great frameworks to explore and build some practical tools with.
-
-As we uncover more treasures Vue is capable of this project will continue to evolve. FoxyJot is a collection of the thoughts and work from the community busy making these frameworks incredible. From the blogs to the example packages, open source tools and incredible developers much appreciation.
+Exploring Vue.js, Vuetify and Firebase. Having a publishing and communications background, I wanted to put together a quick and fun way to write content while creating better experiences for developers and end users. These are great frameworks to explore and build some practical tools with. As we uncover more treasures Vue.js is capable of this project will continue to evolve. FoxyJot is a collection of the thoughts and work from the community busy making these frameworks incredible. From the blogs to the example packages, open source tools and incredible developers much appreciation. Now go and create something incredible.
 
 # Getting Started
 
@@ -29,9 +27,9 @@ yarn
 
 1. Log in to firebase console using your google account and create a new firebase project.
 
-2. In the authentication section, select email password auth type and add a new user by providing an email and a password.
+2. In the authentication section, select email password auth type and create a new user by providing an email and a password. Then copy that users UID from the list.
 
-3. Example database basic security rules included in package.
+3. Example database basic security rules included in package. Simply replace YOURID-UID with the actual UID copied from your Firebase console.
 
 ```javascript
 {
@@ -39,21 +37,21 @@ yarn
     ".write": "auth != null && auth.uid === 'YOURID-UID'"
 ```
 
-1. Copy your project configurations from WEB SETUP (_in `authentication` section of the firebase console_) and paste them in `config.js` inside firebase_config folder by creating it, or replacing the existing ones (hidden).
+1. Copy your project configurations from WEB SETUP (_in `authentication` section of the firebase console_) and paste them in `config.js` inside firebase_config folder.
 
 ```javascript
 // replace the existing config object below
 let config = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: ""
+  apiKey: '',
+  authDomain: '',
+  databaseURL: '',
+  projectId: '',
+  storageBucket: '',
+  messagingSenderId: ''
 };
 ```
 
-1. Run the `firebase init` command (if you haven't installed firebase yet, do so), select your project from the list, select no to overwrite database rules already present and use existing `database.rules.json` in package, choose `dist` as your public directory and configure the project as a single-page app.
+1. Run the `firebase init` command (if you haven't installed firebase tools yet, do so), select your project from the list, select NO to overwrite database rules already present. Use the existing `database.rules.json` in the package, choose `dist` as your public directory and configure the project as a single-page app.
 
 2. You can now use `firebase deploy` to deploy the security rules you just entered (to deploy the actual web app you must first use `npm run build` or `yarn build`).
 
@@ -65,11 +63,13 @@ let config = {
 
 6. Start creating!
 
-NOTE: In Settings and database panel you can load content to get started.
+NOTE: In Settings and database panel you can load demo content to get started.
 
-Lead Generation: The leadGen template includes a form that posts leads to Firebase and from there you can export import to SFDC, or zap a sync between the leads reference in db and salesforce, or other CRM tools. Easily extend, or decrease the number of fields and specific fields required to submit the form.
+Lead Generation: The leadGen template includes a form that posts leads to Firebase and from there you can export import to SFDC, or zap a sync between the leads reference in db and salesforce, or other CRM tools. Easily extend, or decrease the number of fields and specific fields required to submit the form. Track requests based on url of page.
 
-To customize the core theme, simply update the colors in main.js file here:
+Google Tag Manager - To add tag manager tracking go to index.html file and update the tag manager ID (e.g. GTM-XXXXXXX). In order to track each page view setup a change history trigger and Google Analytics tag. If you have not done so already, create a Tag Manager account and Analytics account.
+
+To customize the theme, simply update Vuetify's theme using the colors in main.js file here:
 
 ```bash
 Vue.use(Vuetify, {
@@ -81,6 +81,6 @@ Vue.use(Vuetify, {
 })
 ```
 
-Basic lead generation form and landing page template. Social sharing for any post type using the templates, or inlcuding the code in your own. Google Tag Manager is in the of the index.html file. Add your own ID in order to track activity in your application. User registration is inlcuded (more to come on this feature, currently just the baseline).
+Make writing fun again and leverage basic lead generation for events, newsletters, offers and more. Package extras include lead generation form/template, Social sharing and Google Tag Manager. User registration is included (more to come on this feature, currently just the baseline).
 
-Credits: [Vue](http://vuejs.org/) - [Vuetify](https://vuetifyjs.com/) - [Tamiat](https://github.com/tamiat/tamiat) - [Firebase](https://firebase.google.com/) - [Quilljs](https://quilljs.com/docs/quickstart/)
+Credits: [Vue](http://vuejs.org/) - [Vuetify](https://vuetifyjs.com/) - [Tamiat](https://github.com/tamiat/tamiat) - [Firebase](https://firebase.google.com/) - [Vue-Quill-Editor](https://github.com/surmon-china/vue-quill-editor) - [Quilljs](https://quilljs.com/docs/quickstart/)
