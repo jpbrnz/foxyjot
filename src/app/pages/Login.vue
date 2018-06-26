@@ -30,6 +30,7 @@
                     id="Email"
                     @keyup.enter="userSignIn"
                     color="blue-grey darken-3"
+                    prepend-icon="contact_mail"
                     required
                   ></v-text-field>
                 </v-flex>
@@ -41,6 +42,7 @@
                     id="Password"
                     @keyup.enter="userSignIn"
                     color="blue-grey darken-3"
+                    prepend-icon="lock"
                     required
                   ></v-text-field>
                 </v-flex>

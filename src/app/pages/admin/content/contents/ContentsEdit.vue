@@ -7,7 +7,7 @@
           <div v-for="(field, index) in fields" :key="index" v-if="field.type === 'textbox'">
             <v-text-field
               :name="field"
-              :label="field.name"
+              :label="field.name.charAt(0).toUpperCase() + field.name.slice(1)"
               v-model="content[field.name]"
               required
             ></v-text-field>
@@ -18,7 +18,7 @@
             <v-text-field
               v-model="content[field.name]"
               v-text="content[field.name]"
-              :label="field.name"
+              :label="field.name.charAt(0).toUpperCase() + field.name.slice(1)"
               textarea
               ></v-text-field>
           </div>
@@ -35,7 +35,7 @@
           <div v-for="(field, index) in fields" :key="index" v-if="field.type === 'select'">
             <v-text-field
               :name="field.name"
-              :label="field.name"
+              :label="field.name.charAt(0).toUpperCase() + field.name.slice(1)"
               v-model="content[field.name]"
               required
             ></v-text-field>
@@ -47,7 +47,7 @@
             <div class="tags tagscontainer">
               <v-chip close @click="removeTag(tagKey, field.name)" v-for="(tag, tagKey) in content[field.name]" :key="tagKey">{{tag}}</v-chip>
               <v-text-field
-                :label="field.name"
+                :label="field.name.charAt(0).toUpperCase() + field.name.slice(1)"
                 v-model="inputData"
                 @keyup.enter="styleTags(field.name)"
                 required

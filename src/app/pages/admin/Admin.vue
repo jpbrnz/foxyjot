@@ -81,7 +81,7 @@
           align-center
         >
           <v-flex xs12 class="my-3">
-            <div class="text-xs-center">
+            <div class="text-xs-center introd">
                 <div class="titleAdmin">
                   <h1 class="headline">
                     <v-icon left>dashboard</v-icon> Dashboard
@@ -197,4 +197,7 @@ export default {
   width: 100%
   max-width: 25px
   margin-top: 0.9rem
+.introd
+  max-width: 400px
+  margin: 0 auto
 </style>

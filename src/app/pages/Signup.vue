@@ -26,6 +26,7 @@
                         id="email"
                         type="email"
                         v-model="email"
+                        prepend-icon="contact_mail"
                         required></v-text-field>
                     </v-flex>
                     <v-flex>
@@ -35,6 +36,7 @@
                         id="password"
                         type="password"
                         v-model="password"
+                        prepend-icon="lock"
                         required></v-text-field>
                     </v-flex>
                     <v-flex>
@@ -43,6 +45,7 @@
                         label="Confirm Password"
                         id="confirmPassword"
                         type="password"
+                        prepend-icon="check_box"
                         required
                         v-model="passwordConfirm"
                         :rules="[comparePasswords]"

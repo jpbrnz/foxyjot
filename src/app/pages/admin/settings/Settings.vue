@@ -54,7 +54,7 @@
                 <div v-for="(field, key) in settings" class="field" :key="key" v-if="key !== '.key'">
                   <v-text-field
                     :name="field"
-                    :label="key"
+                    :label="key.charAt(0).toUpperCase() + key.slice(1)"
                     v-model="settings[key]"
                     required
                   ></v-text-field>
