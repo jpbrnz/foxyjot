@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import firebase from 'firebase'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 import routes from './routes'
 import dynamicRoutes from './dynamic-routes'
 import Meta from 'vue-meta'

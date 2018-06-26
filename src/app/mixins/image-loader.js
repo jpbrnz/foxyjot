@@ -1,11 +1,10 @@
-import firebase from 'firebase'
-import { mediaRef } from '@/app/firebase_config'
+import { stor, mediaRef } from '@/app/firebase_config'
 
 export default {
   methods: {
     async uploadImage (e) {
       let file = e.target.files[0]
-      let storageRef = firebase.storage().ref('images/' + file.name)
+      let storageRef = stor.ref('images/' + file.name)
 
       let snapshot = await storageRef.put(file)
 

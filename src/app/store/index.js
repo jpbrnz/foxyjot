@@ -1,7 +1,8 @@
 /* eslint-disable */
 import Vue from 'vue'
 import Vuex from 'vuex'
-import firebase from 'firebase'
+import * as firebase from 'firebase/app'
+import 'firebase/auth'
 /**
  * Module Scope of VUEX
  */

@@ -86,9 +86,8 @@
 </template>
 
 <script>
-import firebase from 'firebase/app'
-import Database from '@/app/components/Database'
-import { mediaRef, settingsRef } from '@/app/firebase_config'
+import Database from '@/app/pages/admin/Database'
+import { stor, mediaRef, settingsRef } from '@/app/firebase_config'
 import notifier from '@/app/mixins/notifier'
 import modal from '@/app/components/shared/Modal'
 import imageLoader from '@/app/mixins/image-loader'
@@ -206,7 +205,7 @@ export default {
     uploadWebsiteLogo (e) {
       console.log(e)
       let file = e.target.files[0]
-      let storageRef = firebase.storage().ref('images/' + file.name)
+      let storageRef = stor.ref('images/' + file.name)
 
       var i = this.media.length
       var currentLogo = null

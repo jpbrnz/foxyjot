@@ -56,9 +56,7 @@
 </template>
 
 <script>
-import firebase from 'firebase'
-
-import { mediaRef } from '@/app/firebase_config'
+import { stor, mediaRef } from '@/app/firebase_config'
 
 export default {
   name: 'Media',
@@ -80,7 +78,7 @@ export default {
   },
   methods: {
     deleteImage (path, key) {
-      let storageRef = firebase.storage().ref(path)
+      let storageRef = stor.ref(path)
       var that = this
       storageRef.delete().then(function () {
         that.$firebaseRefs.media.child(key).remove()

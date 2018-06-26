@@ -111,9 +111,8 @@
 </template>
 
 <script>
-import Database from '@/app/components/Database'
-import firebase from 'firebase'
-import { contentsRef, mediaRef } from '@/app/firebase_config'
+import Database from '@/app/pages/admin/Database'
+import { auth, contentsRef, mediaRef } from '@/app/firebase_config'
 import modal from '@/app/components/shared/Modal'
 
 export default {
@@ -133,7 +132,7 @@ export default {
       loaded: true,
       drawer: false,
       ddown: false,
-      currentUser: firebase.auth().currentUser,
+      currentUser: auth.currentUser,
       showModal: false,
       header: 'Are you sure you want to logout?',
       kind: 'logout',

@@ -123,10 +123,9 @@
 </template>
 
 <script>
-import firebase from 'firebase'
 import {demoData} from '@/../foxyjot.config.json'
 import notifier from '@/app/mixins/notifier'
-import { settingsRef, mediaRef, navRef, contentsRef, fieldsRef } from '@/app/firebase_config'
+import { stor, settingsRef, mediaRef, navRef, contentsRef, fieldsRef } from '@/app/firebase_config'
 export default {
   data () {
     return {...demoData, con: '', interval: {}, value: 0, dbstate: false}
@@ -141,7 +140,7 @@ export default {
   mixins: [notifier],
   methods: {
     addDemoPost () {
-      let storageRef = firebase.storage().ref()
+      let storageRef = stor.ref()
       let postImageRef = storageRef.child('images/light-bg.png')
       let imgDownloadURL = ''
 
@@ -187,7 +186,7 @@ export default {
       })
     },
     addDemoLogo () {
-      let storageRef = firebase.storage().ref()
+      let storageRef = stor.ref()
       let logoRef = storageRef.child(`images/foxyjot-logo.png`)
 
       this.fetchLogoBlob()
