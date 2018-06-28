@@ -17,7 +17,7 @@
       <modal @close="showModal = false" :kind="kind" @addSetting='confirmAddSetting' @confirmDeleteSetting="confirmDeleteSetting()" v-if="showModal" :header="header"/>
     </transition>
     <v-card>
-      <v-card-title class="primary white--text">
+      <v-card-title class="grey lighten-5">
         <span class="headline">General settings</span>
       </v-card-title>
       <v-card-text>

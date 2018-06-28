@@ -16,7 +16,7 @@
       <v-layout row wrap>
         <v-flex xs12 sm6>
           <v-card>
-            <v-card-title class="primary white--text">
+            <v-card-title class="grey lighten-5">
               <span class="headline">Content Type</span>
             </v-card-title>
             <v-card-text>
@@ -91,31 +91,46 @@
           </v-flex>
           <v-flex xs12 sm6>
             <v-card>
-              <v-card-title class="primary white--text">
+              <v-card-title class="grey lighten-5">
                 <span class="headline">Content Fields</span>
               </v-card-title>
               <v-card-text>
                 <label class="label">Available fields</label>
                 <label class="label has-text-danger is-size-7" v-if="fields.length" >Select the fields you want to include in your content type</label>
-                <div class="field is-grouped is-grouped-multiline">
-                  <v-list two-line subheader>
-                    <v-list-tile avatar class="hovedit" v-for="(field, fieldKey) in fields" :key="fieldKey">
-                      <v-list-tile-action>
-                        <v-checkbox v-model="field.checked"></v-checkbox>
-                      </v-list-tile-action>
-                      <v-list-tile-content>
-                        <v-list-tile-title>{{ field.name }}</v-list-tile-title>
-                        <v-list-tile-sub-title>
-                          <span class="link-actions">
-                          <v-icon @click="removeField(field)">delete</v-icon>
-                          <router-link :to="'/admin/content/fieldEdit/' + field['.key']"><v-icon>create</v-icon></router-link>
-                          </span>
-                        </v-list-tile-sub-title>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  </v-list>
+                <div class="field">
+                  <v-menu
+                    :nudge-width="200"
+                    :close-on-content-click="false"
+                    v-model="menu"
+                    offset-x
+                  >
+                    <v-btn slot="activator" color="primary" dark>
+                      Edit or Select Fields
+                    </v-btn>
+                    <v-card>
+                      <v-list subheader>
+                        <v-list-tile avatar class="hovedit" v-for="(field, fieldKey) in fields" :key="fieldKey">
+                          <v-list-tile-action>
+                            <v-checkbox v-model="field.checked"></v-checkbox>
+                          </v-list-tile-action>
+                          <v-list-tile-content>
+                            <v-list-tile-sub-title>
+                              <span class="fieldName">{{ field.name }}</span>
+                              <span class="link-actions">
+                              <v-icon class="pointat" @click="removeField(field)">delete</v-icon>
+                              <router-link :to="'/admin/content/fieldEdit/' + field['.key']"><v-icon>create</v-icon></router-link>
+                              </span>
+                            </v-list-tile-sub-title>
+                          </v-list-tile-content>
+                        </v-list-tile>
+                      </v-list>
+                      <v-card-actions>
+                        <v-spacer></v-spacer>
+                        <router-link to="/admin/content/fieldNew" class="primary" tag="v-btn">Add new field</router-link>
+                      </v-card-actions>
+                    </v-card>
+                  </v-menu>
                 </div>
-                <router-link to="/admin/content/fieldNew" class="primary" tag="v-btn">Add new field</router-link>
                 <!-- View for edit/add new field -->
                 <router-view :edit-field="editField" :add-field="addField" tag="v-btn"></router-view>
               </v-card-text>
@@ -140,6 +155,7 @@ export default {
   },
   data () {
     return {
+      menu: false,
       snackbar: false,
       y: 'bottom',
       mode: '',
@@ -320,28 +336,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fieldName {
+  font-size: 1rem;
+}
+.link-actions {
+  display: none;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+  i {
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  span {
+    cursor: pointer;
+  }
+}
+.hovedit:hover .link-actions {
+  display: inline;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+}
 .contentType {
   .nav-preview {
     padding-left: 15px;
-  }
-
-  .link-actions {
-    display: none;
-    i {
-      font-size: 1rem;
-    }
-    span {
-      cursor: pointer;
-    }
-  }
-
-  .hovedit:hover .link-actions {
-    display: inline;
-    cursor: pointer;
-    text-decoration: none;
-    a {
-      text-decoration: none;
-    }
   }
   ul {
     list-style: none;

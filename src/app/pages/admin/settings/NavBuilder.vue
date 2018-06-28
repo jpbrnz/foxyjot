@@ -3,7 +3,7 @@
   <v-layout row wrap class="nav-builder mt-3">
     <v-flex xs12 sm6>
       <v-card>
-        <v-card-title class="primary white--text">
+        <v-card-title class="grey lighten-5">
           <span class="headline">Navigation Menu Builder</span>
         </v-card-title>
         <v-card-text>
@@ -45,7 +45,7 @@
     </v-flex>
     <v-flex xs12 sm6>
       <v-card>
-        <v-card-title class="primary white--text">
+        <v-card-title class="grey lighten-5">
           <span class="headline">Menu</span>
         </v-card-title>
         <v-card-text>

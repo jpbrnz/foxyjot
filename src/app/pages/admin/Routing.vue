@@ -15,7 +15,7 @@
       <v-layout row wrap>
         <v-flex xs12 sm6>
           <v-card>
-            <v-card-title class="primary white--text">
+            <v-card-title class="grey lighten-5">
               <span class="headline" v-if="form.action === 'update'">Edit route</span>
               <span class="headline" v-else>Create new route</span>
             </v-card-title>
@@ -71,7 +71,7 @@
         </v-flex>
         <v-flex xs12 sm6>
           <v-card>
-            <v-card-title class="primary white--text">
+            <v-card-title class="grey lighten-5">
               <span class="headline">Existing Routes:</span>
             </v-card-title>
             <v-card-text>
