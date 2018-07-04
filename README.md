@@ -37,7 +37,7 @@ yarn
     ".write": "auth != null && auth.uid === 'YOURID-UID'"
 ```
 
-1. Copy your project configurations from WEB SETUP (_in `authentication` section of the firebase console_) and paste them in `config.js` inside firebase_config folder.
+1. Copy your project configurations from WEB SETUP (_in `authentication` section of the firebase console_) and paste them in `config.js` inside firebase_config folder. Here is the content of the config.js file.
 
 ```javascript
 // replace the existing config object below
@@ -49,6 +49,7 @@ let config = {
   storageBucket: '',
   messagingSenderId: ''
 };
+export default config
 ```
 
 1. Run the `firebase init` command (if you haven't installed firebase tools yet, do so), select your project from the list, select NO to overwrite database rules already present. Use the existing `database.rules.json` in the package, choose `dist` as your public directory and configure the project as a single-page app.

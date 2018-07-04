@@ -39,17 +39,17 @@
               <div class="states">
                 <v-container>
                   <v-chip class="state" @click="selectedState = 'all'" :class="{ 'activeState': selectedState === 'all' }">
-                    <v-avatar class="primary">{{ allContents }}</v-avatar>
+                    <v-avatar class="primary white--text">{{ allContents }}</v-avatar>
                     <span>All</span>
                   </v-chip>
 
                   <v-chip class="state" @click="selectedState = 'published'" :class="{ 'activeState': selectedState === 'published' }">
-                    <v-avatar class="primary">{{ publishedContent.length }}</v-avatar>
+                    <v-avatar class="primary white--text">{{ publishedContent.length }}</v-avatar>
                     <span>Published</span>
                   </v-chip>
 
                   <v-chip class="state" @click="selectedState = 'saved'" :class="{ 'activeState': selectedState === 'saved' }">
-                    <v-avatar class="primary">{{ savedContent.length }}</v-avatar>
+                    <v-avatar class="primary white--text">{{ savedContent.length }}</v-avatar>
                     <span>Saved</span>
                   </v-chip>
                 </v-container>
